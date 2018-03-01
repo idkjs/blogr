@@ -1,0 +1,26 @@
+# 1. Create a new draft
+mutation CreateDraft {
+  createDraft(title: "graphql-yoga is awesome", content: "It really is!") {
+    id
+    published
+  }
+}
+
+# 2. Publish the draft
+mutation PublishDraft {
+  publish(id: "post_0") {
+    id
+    title
+    content
+    published
+  }
+}
+
+# 3. Retrieve all posts
+query allPosts {
+  posts {
+    id
+    title
+    published
+  }
+}
